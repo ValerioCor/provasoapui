@@ -7,7 +7,7 @@ pipeline {
         stage('build') {
             steps {
             
-                sh 'AppManage -stop -app Prove -domain ProveJenkins -user admin -pw admin'
+                sh './AppManage -stop -app Prove -domain ProveJenkins -user admin -pw admin'
             }
         }
     }
