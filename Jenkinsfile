@@ -7,7 +7,7 @@ pipeline {
         stage('build') {
             steps {
             
-                sh './AppManage -stop -app Prove -domain ProveJenkins -user tibco -pw tibco123'
+                sh './AppManage -stop -app Prove -domain ProveJenkins -user ValerioCor -pw Catenat3'
             }
         }
     }
