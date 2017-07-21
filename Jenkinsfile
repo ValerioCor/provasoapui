@@ -5,11 +5,11 @@ pipeline {
       steps {
         parallel(
           "stage one": {
-            sh 'pwd'
+            sh 'cd /home/tibco/tibco/tra/5.10/bin'
             
           },
           "stage two": {
-            sh 'cd /home/tibco'
+            sh 'AppManage -stop -app Prove -domain ProveJenkins -user admin -pw admin'
             
           }
         )
