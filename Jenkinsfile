@@ -1,10 +1,18 @@
 pipeline {
   agent any
   stages {
-    stage('build') {
+    stage('stage one') {
       steps {
-        sh '''cd /home/tibco/tibco/tra/5.10/bin
-./AppManage -stop -app Prove -domain ProveJenkins -user admin -pw admin'''
+        parallel(
+          "stage one": {
+            sh 'pwd'
+            
+          },
+          "stage two": {
+            sh 'cd /home/tibco'
+            
+          }
+        )
       }
     }
   }
