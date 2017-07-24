@@ -6,7 +6,6 @@ user="admin"
 
 pswd="admin"
 
-
 app="Prove"
 
 domain="ProveJenkins"
