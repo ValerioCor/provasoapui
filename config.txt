@@ -1,0 +1,2 @@
+path="/home/tibco/tibco/tra/5.10/bin/"
+
