@@ -3,8 +3,9 @@ pipeline {
     stages {
         stage('upload') {
             steps {
-                sh '''source /home/tibco/ProvaJenkins/config.txt    echo $pathupload
-   ./AppManage -upload -ear /home/tibco/tibco/designer/5.10/ProvePoller.ear -app Prove -domain ProveJenkins -user admin -pw admin
+                sh '''source /home/tibco/ProvaJenkins/config.txt    echo $pathdeploy   echo $fileear
+                cd $pathdeploy
+   ./AppManage -upload -ear $fileear -app Prove -domain ProveJenkins -user admin -pw admin
 '''
             }
         }
