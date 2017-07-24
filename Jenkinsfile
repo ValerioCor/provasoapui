@@ -9,10 +9,6 @@ pipeline {
             }
         }
         stage('deploy') {
-             agent label {
-label 'deploy'
-
-       }
              steps {   
               
               sh '''cd /home/tibco/tibco/tra/5.10/bin/
@@ -22,9 +18,7 @@ label 'deploy'
             }
         }
         stage('start') {
-            agent label {
-       label 'start'
-            }
+           
             steps {
           sh '''cd /home/tibco/tibco/tra/5.10/bin/
    ./AppManage -start -app Prove -domain ProveJenkins -user admin -pw admin'''
