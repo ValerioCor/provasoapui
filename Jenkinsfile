@@ -5,7 +5,7 @@ pipeline {
             steps {
                 sh '''source /home/tibco/ProvaJenkins/config.txt   
                 cd $pathupload
-   ./AppManage -upload -ear $fileear -app Prove -domain ProveJenkins -user $user -pw $pswd
+   ./AppManage -upload -ear $fileear -app $app -domain $domain -user $user -pw $pswd
 '''
             }
         }
