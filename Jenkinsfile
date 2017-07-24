@@ -12,7 +12,7 @@ pipeline {
              steps {   
               
               sh '''cd /home/tibco/tibco/tra/5.10/bin/
-   ./AppManage -deploy -app Prove -domain ProveJenkins -user admin -pw admin -domain ProveJenkins
+   ./AppManage -force -deploy -app Prove -domain ProveJenkins -user admin -pw admin -domain ProveJenkins
 '''
       
             }
