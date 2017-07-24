@@ -9,7 +9,7 @@ pipeline {
             }
         }
         stage('deploy') {
-             agent {
+             agent any{
 
 
        }
@@ -22,7 +22,7 @@ pipeline {
             }
         }
         stage('start') {
-            agent {
+            agent any{
        
             }
             steps {
