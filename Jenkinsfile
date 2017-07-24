@@ -10,7 +10,7 @@ pipeline {
         }
         stage('deploy') {
              agent any {
-
+label 'deploy'
 
        }
              steps {   
@@ -23,7 +23,7 @@ pipeline {
         }
         stage('start') {
             agent none {
-       
+       label 'start'
             }
             steps {
           sh '''cd /home/tibco/tibco/tra/5.10/bin/
