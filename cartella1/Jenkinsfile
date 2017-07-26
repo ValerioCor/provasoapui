@@ -3,9 +3,7 @@ pipeline {
     stages {
         stage('upload') {
             steps {
-                sh '''
-                // source /home/tibco/proveparam/config.txt
-                cd $pathupload
+                sh ''' cd $pathupload
    ./AppManage -upload -ear $fileear -app $app -domain $domain -user $user -pw $pswd
 '''
             }
