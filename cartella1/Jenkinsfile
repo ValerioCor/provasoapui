@@ -4,7 +4,7 @@ pipeline {
         stage('upload') {
             steps {
                 sh ''' env
-                source /home/tibco/proveparam/config.txt
+                source $WORKSPACE/config.txt
                 cd $pathupload
    ./AppManage -upload -ear $fileear -app $app -domain $domain -user $user -pw $pswd
 '''
