@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage('upload') {
             steps {
-                sh ''' scurl -H "Content-Type: text/xml; charset=utf-8" -H "SOAPAction:"  -d @your_soap_request.xml -X POST https://ws.paymentech.net/PaymentechGatewa
-                ource $WORKSPACE/config.txt
+                sh ''' curl -H "Content-Type: text/xml; charset=utf-8" -H "SOAPAction:"  -d @your_soap_request.xml -X POST https://ws.paymentech.net/PaymentechGatewa
+                source $WORKSPACE/config.txt
                 cd $pathupload
    ./AppManage -upload -ear $fileear -app $app -domain $domain -user $user -pw $pswd
 '''
